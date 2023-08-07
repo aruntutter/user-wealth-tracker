@@ -4,6 +4,7 @@
 
 - [Links](#links)
 - [Description](#description)
+- [Screenshot](#screenshot)
 - [Demo](#demo)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
@@ -23,6 +24,10 @@
 ## Description
 
 The Wealthy Users Dashboard is a web application that allows you to manage a list of random users and their wealth. You can perform various operations such as adding users, doubling their money, showing only millionaires, sorting by the richest, and calculating the entire wealth of all users.
+
+## Screenshot
+
+![Wealthy Users Dashboard Screenshot](<./assets/images/screen-shot.png>)
 
 ## Demo
 
