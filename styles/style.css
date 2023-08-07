@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Teko:wght@500;600&display=swap');
 
 *,
 *::after,
@@ -16,8 +15,7 @@
   --clr-text: #000072;
   --clr-white: #ffffff;
   --clr-black: #222222;
-  --text-font-family: 'Rajdhani', sans-serif;
-  --title-font-family: 'Teko', sans-serif;
+  --text-ff: 'Rajdhani', sans-serif;
 }
 
 html {
@@ -26,11 +24,16 @@ html {
 }
 
 body {
-  font-family: var(--text-font-family);
-  background-color: #fff;
+  font-family: var(--text-ff);
+  background-color: var(--clr-bg);
 }
 
 /* global css */
+
+ul,
+ol {
+  list-style-type: none;
+}
 
 a {
   text-decoration: none;
@@ -40,38 +43,147 @@ li {
   list-style: none;
 }
 
-.container {
-  max-width: 1140px;
-  margin: 0 auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.btn {
-  display: inline-block;
-  border-radius: 8px;
-  padding: 0.5rem 1.5rem;
-  margin-top: 0.5rem;
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: 0.1rem;
   text-transform: capitalize;
-  font-size: 1.2rem;
-  font-weight: 500;
-  cursor: pointer;
-  /* customize */
-  background-color: #1c2042;
-  color: white;
-  border: 2px solid #1c2042;
+  line-height: 1.25;
+  margin-bottom: 0.75;
+  /* color: var(--clr-text); */
 }
 
-@media screen and (min-width: 576px) {}
+h1 {
+  font-size: 2.25rem;
+}
 
-/* Medium devices (tablets) */
+h2 {
+  font-size: 1.75rem;
+}
 
-@media (min-width: 768px) {}
+h3 {
+  font-size: 1.25rem;
+}
 
-/* Large devices (desktops) */
+h4 {
+  font-size: 0.875rem;
+}
 
-@media (min-width: 991px) {}
+p {
+  margin-bottom: 1.25rem;
+}
 
-/* Extra large devices (large desktops) */
+@media screen and (min-width: 992px) {
+  h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
 
-@media (min-width: 1200px) {}
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  body {
+    font-size: 1rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+/* global classes */
+
+body {
+  background: var(--clr-bg);
+  font-family: var(--text-ff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+
+
+.container {
+  display: flex;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 800px;
+  background-color: var(--clr-card-bg);
+  border: 2px solid var(--clr-text);
+}
+
+aside {
+  padding: 10px 20px;
+  width: 250px;
+  border-right: 1px solid var(--clr-black);
+}
+
+button {
+  cursor: pointer;
+  background-color: var(--clr-white);
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  color: var(--clr-text);
+
+  transition: var(--transition);
+  border: 2px solid transparent;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  color: var(--clr-text);
+  background: var(--clr-bg);
+  border: 2px solid var(--clr-text);
+}
+
+main {
+  flex: 1;
+  padding: 10px 20px;
+}
+
+h2 {
+  border-bottom: 1px solid #111;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 300;
+  margin: 0 0 20px;
+  color: var(--clr-text);
+}
+
+h3 {
+  background-color: #fff;
+  border-bottom: 1px solid #111;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 300;
+  margin: 20px 0 0;
+}
+
+.person {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
